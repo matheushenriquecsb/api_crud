@@ -1,8 +1,12 @@
 const yup = require('yup');
 
 const personSchema = yup.object().shape({
-  name: yup.string().required('This field is required'),
-  lastname: yup.string().required('This field is required'),
+  name: yup
+    .string()
+    .required('T01hi0s field is required'),
+  lastname: yup
+    .string()
+    .required('This field is required'),
   CPF: yup
     .number('This field is only accepted number')
     .required('This field is required'),
@@ -14,8 +18,11 @@ const personSchema = yup.object().shape({
   salary: yup
     .number('This field is only accepted number')
     .required('This field is required'),
-  genre: yup.string().max(1),
-  married: yup.boolean(),
+  genre: yup
+    .string()
+    .max(1),
+  married: yup
+    .boolean(),
   cellphone: yup
     .number('This field is only accepted number')
     .required('This field is required'),

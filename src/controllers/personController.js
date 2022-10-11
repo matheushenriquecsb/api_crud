@@ -16,7 +16,7 @@ const createPerson = async (req, res) => {
 
   try {
     await Person.create(person);
-    res.status(201).json({ message: 'Cadastro com sucesso' });
+    res.status(201).json({ message: 'User created sucessfully' });
   } catch (error) {
     res.status(500).json({ error: error });
   }
@@ -42,7 +42,7 @@ const updatePerson = async (req, res) => {
   try {
     const updatePerson = await Person.updateOne({ _id: id }, person);
 
-    res.status(200).json({ message: 'Cliente atualizado com sucesso' });
+    res.status(200).json({ message: 'User updated sucessfuly!' });
   } catch (error) {
     res.status(500).json({ error: error });
   }
