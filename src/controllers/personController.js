@@ -41,7 +41,6 @@ const updatePerson = async (req, res) => {
 
   try {
     const updatePerson = await Person.updateOne({ _id: id }, person);
-
     res.status(200).json({ message: 'User updated sucessfuly!' });
   } catch (error) {
     res.status(500).json({ error: error });
@@ -77,7 +76,6 @@ const deletePerson = async (req, res) => {
   const person = await Person.findOne({ _id: id });
   if (!person) {
     res.status(422).json({ message: 'User not found!' });
-    return
   }
 
   try {
